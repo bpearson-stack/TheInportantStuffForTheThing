@@ -1447,7 +1447,6 @@ statusbars.onZero(StatusBarKind.HK2, function (status) {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (sprite == HomeKnight1) {
-        W1K1.value += -0.1
         HK1_Health.value += -0.1
         otherSprite.follow(sprite)
         timer.after(600, function () {
@@ -1455,7 +1454,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
         })
     }
     if (sprite == HomeKnight2) {
-        W1K1.value += -0.1
         HK2_Health.value += -0.1
         otherSprite.follow(sprite)
         timer.after(600, function () {
@@ -1463,7 +1461,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
         })
     }
     if (sprite == HomeKnight3) {
-        W1K1.value += -0.1
         HK3_Health.value += -0.1
         otherSprite.follow(sprite)
         timer.after(600, function () {
@@ -1471,7 +1468,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
         })
     }
     if (sprite == HomeKnight4) {
-        W1K1.value += -0.1
         HK4_Health.value += -0.1
         otherSprite.follow(sprite)
         timer.after(600, function () {
@@ -1479,8 +1475,14 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
         })
     }
     if (sprite == HomeKnight5) {
-        W1K1.value += -0.1
         HK5_Health.value += -0.1
+        otherSprite.follow(sprite, 100)
+    }
+    if (otherSprite == Wave_1_Knight_1) {
+        W1K1.value += -0.1
+    }
+    if (otherSprite == Wave_1_Knight_2) {
+        W1K2.value += -0.1
         otherSprite.follow(sprite, 100)
     }
     timer.after(600, function () {
